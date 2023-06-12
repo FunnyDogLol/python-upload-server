@@ -13,7 +13,7 @@ class UploadHandler(SimpleHTTPRequestHandler):
         file_name = self.headers['filename']
         
         # Save the uploaded file
-        with open(f"{upload_dir}/{filename}", 'wb') as f:
+        with open(f"{upload_dir}/{file_name}", 'wb') as f:
             f.write(file_data)
         
         # Send a response indicating success
