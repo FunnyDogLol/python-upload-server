@@ -15,10 +15,8 @@ class UploadHandler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(b'File uploaded successfully')
 
-# Specify the server address and port
 server_address = ('', 81)
 
-# Create the server instance using the custom handler
 httpd = HTTPServer(server_address, UploadHandler)
 
 # Start the server
